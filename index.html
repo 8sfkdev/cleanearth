@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="game">
+  
+    <!-- TOP BAR -->
+    <header id="topbar">
+  
+      <div class="brand">
+        <div class="brand-mark">CE</div>
+        <div>
+          <h1>Clean Earth Industries</h1>
+          <span>Industrial Management System</span>
+        </div>
+      </div>
+  
+      <div class="resources">
+  
+        <div class="resource">
+          <span>FUNDS</span>
+          <strong id="money">£100,000</strong>
+        </div>
+  
+        <div class="resource">
+          <span>ENERGY</span>
+          <strong id="energy">0 / 0 MW</strong>
+        </div>
+  
+        <div class="resource">
+          <span>WATER</span>
+          <strong id="water">0 / 0 ML</strong>
+        </div>
+  
+        <div class="resource">
+          <span>POLLUTION</span>
+          <strong id="pollution">0%</strong>
+        </div>
+  
+        <div class="resource">
+          <span>PROFIT</span>
+          <strong id="profit">£0 / day</strong>
+        </div>
+  
+      </div>
+  
+    </header>
+  
+  
+    <!-- GAME AREA -->
+    <main id="gameArea">
+  
+      <canvas id="gameCanvas"></canvas>
+  
+  
+      <!-- LEFT INFORMATION PANEL -->
+      <aside id="infoPanel">
+  
+        <div class="panel-title">
+          <span>FACILITY INFORMATION</span>
+          <button id="closeInfo">×</button>
+        </div>
+  
+        <div id="facilityInfo">
+  
+          <div class="empty-info">
+            <div class="empty-icon">+</div>
+            <h3>Select a facility</h3>
+            <p>
+              Select a building on the map to view
+              its information and operating status.
+            </p>
+          </div>
+  
+        </div>
+  
+      </aside>
+  
+  
+      <!-- BUILD MENU -->
+      <aside id="buildMenu">
+  
+        <div class="build-header">
+          <div>
+            <h2>Construction</h2>
+            <p>Build your industrial complex</p>
+          </div>
+  
+          <button id="toggleBuildMenu">−</button>
+        </div>
+  
+  
+        <!-- CATEGORY TABS -->
+        <div class="categories">
+  
+          <button class="category active" data-category="all">
+            ALL
+          </button>
+  
+          <button class="category" data-category="production">
+            PRODUCTION
+          </button>
+  
+          <button class="category" data-category="energy">
+            ENERGY
+          </button>
+  
+          <button class="category" data-category="water">
+            WATER
+          </button>
+  
+          <button class="category" data-category="waste">
+            WASTE
+          </button>
+  
+          <button class="category" data-category="transport">
+            TRANSPORT
+          </button>
+  
+          <button class="category" data-category="environment">
+            ENVIRONMENT
+          </button>
+  
+        </div>
+  
+  
+        <!-- BUILDING LIST -->
+        <div id="buildingList"></div>
+  
+      </aside>
+  
+  
+      <!-- BOTTOM TOOLBAR -->
+      <div id="toolbar">
+  
+        <button class="tool active" data-tool="select">
+          <span>SELECT</span>
+        </button>
+  
+        <button class="tool" data-tool="build">
+          <span>BUILD</span>
+        </button>
+  
+        <button class="tool" data-tool="road">
+          <span>ROAD</span>
+        </button>
+  
+        <button class="tool" data-tool="powerline">
+          <span>POWER</span>
+        </button>
+  
+        <button class="tool" data-tool="pipe">
+          <span>WATER</span>
+        </button>
+  
+        <button class="tool danger" data-tool="demolish">
+          <span>DEMOLISH</span>
+        </button>
+  
+      </div>
+  
+  
+      <!-- SPEED CONTROLS -->
+      <div id="timeControls">
+  
+        <button id="pauseBtn">Ⅱ</button>
+  
+        <button class="speed active" data-speed="1">
+          1×
+        </button>
+  
+        <button class="speed" data-speed="2">
+          2×
+        </button>
+  
+        <button class="speed" data-speed="4">
+          4×
+        </button>
+  
+      </div>
+  
+  
+      <!-- NOTIFICATIONS -->
+      <div id="notifications"></div>
+  
+  
+      <!-- ZOOM -->
+      <div id="zoomControls">
+  
+        <button id="zoomOut">−</button>
+  
+        <span id="zoomText">100%</span>
+  
+        <button id="zoomIn">+</button>
+  
+      </div>
+  
+  
+      <!-- SAVE BUTTONS -->
+      <div id="saveControls">
+  
+        <button id="saveGame">
+          SAVE
+        </button>
+  
+        <button id="loadGame">
+          LOAD
+        </button>
+  
+      </div>
+  
+    </main>
+  
+  </div>
+</body>
+</html>
